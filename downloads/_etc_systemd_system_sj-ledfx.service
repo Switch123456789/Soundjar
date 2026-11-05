@@ -1,0 +1,14 @@
+[Unit]
+Description=LedFx Music Visualizer
+After=network.target sound.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=root
+Group=audio
+ExecStart=/root/.ledfx/bin/python /root/.ledfx/bin/ledfx
+Environment=XDG_RUNTIME_DIR=/run/user/0
+[Install]
+WantedBy=multi-user.target
