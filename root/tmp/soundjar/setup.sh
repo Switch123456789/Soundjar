@@ -3,7 +3,7 @@
         curl -fsSL -o /dev/null -w '%{url_effective}' "https://github.com/${1}/releases/latest" | sed 's|.*/tag/v||'
     }
     download_file() {
-        curl -L "${SJ_URL}/${1}" | install -D -m 644 /dev/stdin "${1}"
+        curl -L "${SJ_URL}${1}" | install -D -m 644 /dev/stdin "${1}"
     }
 
 # INSTALL > DEPENDENCIES
