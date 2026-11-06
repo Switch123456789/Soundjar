@@ -13,7 +13,7 @@
     /root/.ledfx/bin/python -m pip install --upgrade pip wheel setuptools ledfx
 
     # Sendspin
-    SJ_SENDSPIN_VERSION=$(curl -fsSL -o /dev/null -w '%{url_effective}' "https://github.com/${1}/releases/latest" | sed 's|.*/tag/v||')
+    SJ_SENDSPIN_VERSION=$(curl -fsSL -o /dev/null -w '%{url_effective}' "https://github.com/Sendspin/sendspin-cpp-cli/releases/latest" | sed 's|.*/tag/v||')
     curl -Lo "/tmp/sendspin-cpp-cli.tar.gz" "https://github.com/Sendspin/sendspin-cpp-cli/releases/latest/download/sendspin-cli-${SJ_SENDSPIN_VERSION}-linux-arm64.tar.gz"
     tar -xOf "/tmp/sendspin-cpp-cli.tar.gz" --strip-components=4 "sendspin-cli-${SJ_SENDSPIN_VERSION}-linux-arm64/usr/local/bin/sendspin-cli" | \
         install -D -m 755 "/dev/stdin" "/usr/bin/sendspin-cli"

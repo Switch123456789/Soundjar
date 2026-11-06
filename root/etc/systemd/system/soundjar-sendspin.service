@@ -2,9 +2,9 @@
 Description="Soundjar Sendspin"
 Conflicts=soundjar-bluetooth.service
 After=soundjar-bluetooth.service
-Wants=sendspin-cli
-Before=sendspin-cli
-PropagatesStopTo=sendspin-cli
+Wants=sendspin-cli.service
+Before=sendspin-cli.service
+PropagatesStopTo=sendspin-cli.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes

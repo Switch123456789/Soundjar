@@ -1,5 +1,5 @@
 [Unit]
-Description="Soundjar Sendspin"
+Description="Soundjar Bluetooth"
 Conflicts=soundjar-sendspin.service
 After=soundjar-sendspin.service
 Wants=bluealsa.service bluealsa-aplay.service ledfx.service
