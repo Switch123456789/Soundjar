@@ -10,7 +10,5 @@ PropagatesStopTo=sendspin-cli
 Type=oneshot
 RemainAfterExit=yes
 ExecStart= #LED-Effekt hier!
-Restart=always
-RestartSec=5
 [Install]
 WantedBy=multi-user.target

@@ -7,7 +7,5 @@ Requires=bluetooth.service
 ExecStartPre=/usr/bin/bluetoothctl power on
 ExecStartPre=/usr/bin/bluetoothctl discoverable on
 ExecStart=/usr/bin/bt-agent -c NoInputNoOutput
-Restart=always
-RestartSec=5
 [Install]
 WantedBy=multi-user.target
