@@ -45,7 +45,7 @@
     sed -i "s/#name = kitchen/name = ${SJ_NAME}/"                                   "/etc/sendspin-cli.conf"
     sed -i "s/#manufacturer = sendspin-cpp-cli/manufacturer = \"Raspberry Pi\"/"    "/etc/sendspin-cli.conf"
     sed -i "s/#buffer-ms = 100/buffer-ms = 1000/"                                   "/etc/sendspin-cli.conf"
-    sed -i "s/#server = mdns:Living Room/Server = ${SJ_SERVER}/"                    "/etc/sendspin-cli.conf"
+    sed -i "s/#server = mdns:Living Room/server = ${SJ_SERVER}/"                    "/etc/sendspin-cli.conf"
     sed -i "s/#pairing-code = 48151623/pairing-code = ${SJ_CODE}/"                  "/etc/sendspin-cli.conf"
 
     # Audio
