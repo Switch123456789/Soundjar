@@ -9,7 +9,7 @@
     /boot/dietpi/func/dietpi-set_hardware bluetooth enable
 
     # LedFx
-    python3 -m venv root/.ledfx
+    python3 -m venv /root/.ledfx
     /root/.ledfx/bin/python -m pip install --upgrade pip wheel setuptools ledfx
 
     # Sendspin
