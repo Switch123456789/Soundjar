@@ -1,0 +1,13 @@
+[Unit]
+Description="Soundjar Sendspin"
+Conflicts=soundjar-bluetooth.service
+After=soundjar-bluetooth.service
+Wants=sendspin-cli
+Before=sendspin-cli
+PropagatesStopTo=sendspin-cli
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=echo ""
+[Install]
+WantedBy=multi-user.target

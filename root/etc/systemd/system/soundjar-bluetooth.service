@@ -1,16 +1,13 @@
-#/etc/systemd/system/sj-audio-bluetooth.service
 [Unit]
-Description="Soundjar Audio (Bluetooth)"
-Conflicts=sj-audio-sendspin.service
-After=sj-audio-sendspin.service
+Description="Soundjar Sendspin"
+Conflicts=soundjar-sendspin.service
+After=soundjar-sendspin.service
 Wants=bluealsa.service bluealsa-aplay.service ledfx.service
 Before=bluealsa.service bluealsa-aplay.service ledfx.service
 PropagatesStopTo=bluealsa.service bluealsa-aplay.service ledfx.service
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart= #LED-Effekt hier!
-Restart=always
-RestartSec=5
+ExecStart=echo ""
 [Install]
 WantedBy=multi-user.target
